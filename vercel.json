@@ -1,6 +1,7 @@
 {
+  "root": "vantage-checker",
   "buildCommand": "npm run build",
-  "outputDirectory": "dist",
+  "outputDirectory": "vantage-checker/dist",
   "framework": "vite",
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
