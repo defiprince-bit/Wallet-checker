@@ -186,7 +186,7 @@ fetchAddresses("wlFCFS"),
           </div>
           <div className="gc rounded-2xl px-4 py-4">
             <div className="flex items-center gap-1 mb-2"><Shield size={10} style={{color:"#fbbf24"}}/><span style={{color:"#fbbf24",fontSize:"0.7rem",fontWeight:500}}>GTD Collab</span></div>
-            <p className="fs font-bold text-white" style={{fontSize:"1rem"}}>Free</p>
+            <p className="fs font-bold text-white" style={{fontSize:"1rem"}}>0.00069 ETH</p>
             <p style={{color:"rgba(196,181,253,0.45)",fontSize:"0.7rem",marginTop:2}}>Guaranteed</p>
           </div>
           <div className="gc rounded-2xl px-4 py-4">
@@ -264,9 +264,9 @@ fetchAddresses("wlFCFS"),
                 </div>
               </div>
               <div>
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium mb-3" style={{background:"rgba(251,191,36,0.1)",border:"1px solid rgba(251,191,36,0.25)",color:"#fbbf24"}}>⚡ GTD Collab — Guaranteed Free Mint</div>
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium mb-3" style={{background:"rgba(251,191,36,0.1)",border:"1px solid rgba(251,191,36,0.25)",color:"#fbbf24"}}>⚡ ⚡ GTD Collab — 0.00069 ETH Mint</div>
                 <h2 className="fs text-white mb-2" style={{fontSize:"2.1rem",fontWeight:800}}>Collab confirmed. 🤝</h2>
-                <p className="text-sm max-w-xs mx-auto leading-relaxed" style={{color:"rgba(196,181,253,0.6)"}}>You're on the <strong style={{color:"#fbbf24"}}>Collab GTD list</strong> — your mint is locked in and free.</p>
+                <p className="text-sm max-w-xs mx-auto leading-relaxed" style={{color:"rgba(196,181,253,0.6)"}}>You're on the <strong style={{color:"#fbbf24"}}>Collab GTD list</strong> — your mint is confirmed at <strong style={{color:"#fbbf24"}}>0.00069 ETH</strong>.</p>
               </div>
               <div className="rounded-2xl px-4 py-3.5 text-left" style={{background:"rgba(251,191,36,0.06)",border:"1px solid rgba(251,191,36,0.15)"}}>
                 <p className="text-xs font-medium mb-1" style={{color:"#fbbf24"}}>GTD Collab confirmed</p>
