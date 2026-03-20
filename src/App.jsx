@@ -20,7 +20,7 @@ const PROJECT = {
   sub: "Leading the charge through high-stakes degeneracy and late-night alphas.",
   twitterUrl: "https://x.com/VantageNFT_eth",
   discordUrl: "https://discord.com/invite/MHtKkgzeE",
-  mintDate: "TBA",
+  mintDate: "March 23, 2026",
   wlPrice: "0.00069 ETH",
   pillars: ["Art", "Culture", "Community"],
 };
