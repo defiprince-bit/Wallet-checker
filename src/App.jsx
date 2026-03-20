@@ -39,8 +39,6 @@ async function fetchAddresses(sheetKey) {
   }
   return addresses;
 }
-}
-
 export default function App() {
   const [walletInput, setWalletInput]         = useState("");
   const [status, setStatus]                   = useState("idle");
