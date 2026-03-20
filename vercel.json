@@ -1,6 +1,5 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "framework": "vite",
+  "buildCommand": "cd vantage-checker && npm install && npm run build",
+  "outputDirectory": "vantage-checker/dist",
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
