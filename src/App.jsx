@@ -32,10 +32,13 @@ async function fetchAddresses(sheetKey) {
   if (!res.ok) throw new Error("bad response");
   const text = await res.text();
   const addresses = new Set();
-  const lines = text.trim().split("\n").slice(1);
+  const lines = text.trim().split("\n");
   for (const line of lines) {
-    const val = line.split(",")[0].trim().replace(/"/g, "").toLowerCase();
-    if (isValidAddress(val)) addresses.add(val);
+    const cols = line.split(",");
+    for (const col of cols) {
+      const val = col.trim().replace(/"/g, "").replace(/\r/g, "").toLowerCase();
+      if (isValidAddress(val)) addresses.add(val);
+    }
   }
   return addresses;
 }
