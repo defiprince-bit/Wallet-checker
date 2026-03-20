@@ -27,27 +27,18 @@ const PROJECT = {
 
 const isValidAddress = (addr) => /^0x[a-fA-F0-9]{40}$/.test(addr.trim());
 
-async function fetchAddresses(url) {
-  const proxies = [
-    `https://corsproxy.io/?${encodeURIComponent(url)}`,
-    `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
-  ];
-  let lastErr;
-  for (const proxied of proxies) {
-    try {
-      const res = await fetch(proxied);
-      if (!res.ok) throw new Error("bad response");
-      const text = await res.text();
-      const addresses = new Set();
-      const lines = text.trim().split("\n").slice(1);
-      for (const line of lines) {
-        const val = line.split(",")[0].trim().replace(/"/g, "").toLowerCase();
-        if (isValidAddress(val)) addresses.add(val);
-      }
-      return addresses;
-    } catch (err) { lastErr = err; }
+async function fetchAddresses(sheetKey) {
+  const res = await fetch(`/api/allowlist?sheet=${sheetKey}`);
+  if (!res.ok) throw new Error("bad response");
+  const text = await res.text();
+  const addresses = new Set();
+  const lines = text.trim().split("\n").slice(1);
+  for (const line of lines) {
+    const val = line.split(",")[0].trim().replace(/"/g, "").toLowerCase();
+    if (isValidAddress(val)) addresses.add(val);
   }
-  throw lastErr;
+  return addresses;
+}
 }
 
 export default function App() {
@@ -61,9 +52,9 @@ export default function App() {
     const load = async () => {
       try {
         const [gtdSpecial, gtdCollab, wlFCFS] = await Promise.all([
-          fetchAddresses(SHEETS.gtdSpecial),
-          fetchAddresses(SHEETS.gtdCollab),
-          fetchAddresses(SHEETS.wlFCFS),
+          fetchAddresses("gtdSpecial"),
+fetchAddresses("gtdCollab"),
+fetchAddresses("wlFCFS"),
         ]);
         setLists({ gtdSpecial, gtdCollab, wlFCFS });
         setListStatus("ready");
